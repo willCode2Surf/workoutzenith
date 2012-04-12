@@ -1,2 +1,2 @@
 $ ->
-  alert 'we are here'
+  console.log 'we are here'

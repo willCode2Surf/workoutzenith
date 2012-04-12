@@ -43,4 +43,5 @@ end
 group :test do
   gem 'jasminerice', :git => "https://github.com/bradphelan/jasminerice.git", :branch => 'master'
   gem 'guard-jasmine', :git => "https://github.com/netzpirat/guard-jasmine.git", :branch => 'master'
+  gem 'capybara',          '~> 1.1.2'
 end
