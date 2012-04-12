@@ -1,0 +1,2 @@
+$ ->
+  alert 'we are here'
