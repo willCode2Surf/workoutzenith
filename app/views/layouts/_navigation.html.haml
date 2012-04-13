@@ -15,8 +15,21 @@
         %li
           %a{:href=>"#"}New
           %a{:href=>"#"}List
-    %ul.nav.pull-right
-      %li
-        %form.navbar-search.pull-left
-          %input.search-query.span2{:type=>"text",:placeholder=>"search"}
+    %li
+      %form.navbar-search.pull-left
+        %input.search-query.span2{:type=>"text",:placeholder=>"search"}
+
+  %i.topbar-divider
+  .pull-right
+    %ul.nav    
+      %li.dropdown
+        %a.dropdown-toggle{:href=>"#", :data =>{:toggle=>"dropdown"}}
+          Account
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            %a{:href=>"#"}Account
+          %li.dropdown-divider
+          %li
+            %a{:href=>"#"}Sign Out 
   
