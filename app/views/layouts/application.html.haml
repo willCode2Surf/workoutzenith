@@ -28,5 +28,11 @@
               %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
                 %a.close{"data-dismiss" => "alert"} ×
                 = msg
-            = yield
+        .row-fluid
+          .span2
+            %p left
+          #main.span7
+            %p Main
+          .span3
+            %p right
         %footer
