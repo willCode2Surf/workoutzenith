@@ -1,1 +1,22 @@
-= link_to "Workoutzenith", root_path, :class => 'brand'
+%a.btn.btn-navbar{:data => {:toggle => "collapse", :target=> ".nav-collapse"}}
+  %span.icon-bar
+  %span.icon-bar
+  %span.icon-bar
+= link_to "Workout Zenith", root_path, :class => 'brand'
+.nav-collapse
+  %ul.nav
+    %li.active
+      %a{:href=>"#"} Home
+    %li.dropdown
+      %a.dropdown-toggle{:href=>"#", :data =>{:toggle=>"dropdown"}}
+        Vault
+        %b.caret
+      %ul.dropdown-menu
+        %li
+          %a{:href=>"#"}New
+          %a{:href=>"#"}List
+    %ul.nav.pull-right
+      %li
+        %form.navbar-search.pull-left
+          %input.search-query.span2{:type=>"text",:placeholder=>"search"}
+  
