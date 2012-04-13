@@ -20,14 +20,13 @@
       %nav.navbar-inner
         .container-fluid
           = render 'layouts/navigation'
-    #main{:role => "main"}
-      .container-fluid
-        .content
-          .row-fluid
-            .span12
-              - flash.each do |name, msg|
-                %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
-                  %a.close{"data-dismiss" => "alert"} ×
-                  = msg
-              = yield
-          %footer
+    %section.container-fluid{:role => "main"}
+      .content
+        .row-fluid
+          .span12
+            - flash.each do |name, msg|
+              %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+                %a.close{"data-dismiss" => "alert"} ×
+                = msg
+            = yield
+        %footer
