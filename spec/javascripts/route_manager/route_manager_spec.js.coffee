@@ -6,5 +6,8 @@ describe 'route manageer', ->
 
   describe 'root view', ->
     it 'should have a root view', ->
-      console.log $('#main').html() + 'tits'
-      expect(@routeManager.rootElement).toBeTruthy()
+      #Ember.run ->
+      @routeManager.start()
+
+      console.log $('#main').html() + 'some'
+      expect(@routeManager.get 'rootView').toBeTruthy()

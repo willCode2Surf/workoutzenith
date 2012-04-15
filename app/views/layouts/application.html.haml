@@ -16,23 +16,23 @@
       <![endif]-->
     = yield(:head)
   %body
-    %header.navbar.navbar-fixed-top
-      %nav.navbar-inner
-        .container-fluid
-          = render 'layouts/navigation'
-    %section.container-fluid{:role => "main"}
-      .content
-        .row-fluid
-          .span12
-            - flash.each do |name, msg|
-              %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
-                %a.close{"data-dismiss" => "alert"} ×
-                = msg
-        .row-fluid
-          .span2
-            %p left
-          #main.span7
-            %p Main
-          .span3
-            %p right
-        %footer
+    -#%header.navbar.navbar-fixed-top
+      -#%nav.navbar-inner
+        -#.container-fluid
+          -#= render 'layouts/navigation'
+    -#%section.container-fluid{:role => "main"}
+      -#.content
+        -#.row-fluid
+          -#.span12
+            -#- flash.each do |name, msg|
+              -#%div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+                -#%a.close{"data-dismiss" => "alert"} ×
+                -#= msg
+        -#.row-fluid
+          -#.span2
+            -#%p left
+          -##main.span7
+            -#%p Main
+          -#.span3
+            -#%p right
+        -#%footer

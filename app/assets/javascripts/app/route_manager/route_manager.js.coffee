@@ -1,3 +1,6 @@
 WZ.RouteManager = Em.RouteManager.extend
   rootElement: '#main'
-  rootView: WZ.Views.Main
+  init: ->
+    @_super()
+    @set 'rootView', WZ.Views.Main.create()
+
