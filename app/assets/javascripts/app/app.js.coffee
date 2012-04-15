@@ -5,10 +5,10 @@ window.WZ = Ember.Application.create
   StateManagers: {}
   Views: {}
 
-  rootElement: '#main'
+  #rootElement: '#main'
 
   run: ->
-    @set 'main_state_manager', WZ.StateManagers.Main.create()
+    #@set 'route_manager', WZ.RouteManager.create()
     #@set('vault_controller', WZ.Controllers.Vault.create())
     #@set('home_controller', WZ.Controllers.HomeCon.create())
 
