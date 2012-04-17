@@ -8,7 +8,7 @@ window.WZ = Ember.Application.create
   #rootElement: '#main'
 
   run: ->
-    #@set 'route_manager', WZ.RouteManager.create()
+    @set 'route_manager', WZ.RouteManager.create()
     #@set('vault_controller', WZ.Controllers.Vault.create())
     #@set('home_controller', WZ.Controllers.HomeCon.create())
 
