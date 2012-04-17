@@ -7,5 +7,5 @@ describe 'route manageer', ->
         @routeManager = WZ.RouteManager.create()
         @routeManager.start()
 
-      console.log $('#main').html() + 'some'
+      console.log $('body').html() + 'some'
       expect(@routeManager.get 'rootView').toBeTruthy()
