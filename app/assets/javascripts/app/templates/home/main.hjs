@@ -22,6 +22,11 @@
               <li><a href="#vault/home">Home</a></li>
             </ul>
           </li>
+          <li>
+            <form class="navbar-search pull-left">
+              <input class="search-query span2" type="text" placeholder="search"/>
+            </form>
+          </li>
         </ul>
       </div>
     </div>
