@@ -28,6 +28,24 @@
             </form>
           </li>
         </ul>
+        <i class="topbar-divider"/>
+        <div class="pull-right">
+          <ul class="nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown">Account</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Account</a>
+                  <b class="caret"/>
+                </li>
+                <li class="dropdown-divider"/>
+                <li>
+                  <a href="#">Sign Out</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
