@@ -1,5 +1,5 @@
 WZ.Views.Nav = Ember.View.extend
-  templateName: 'app/templates/home/main'
+  templateName: 'app/templates/nav/nav'
 
 WZ.layout =  Ember.ContainerView.create
   childViews: ['navigationArea', 'contentArea']
@@ -7,10 +7,23 @@ WZ.layout =  Ember.ContainerView.create
   contentArea: Ember.ContainerView.create({})
     
 
-WZ.RouteManager = Em.RouteManager.extend
-  rootView: WZ.layout.get('navigationArea')
+WZ.NavRouteManager = Em.RouteManager.extend
+  rootView: WZ.layout.get 'navigationArea'
   initialState: "nav"
 
   nav: Ember.ViewState.create
-    route: '/'
-    view: WZ.Views.Nav.create()
+    view: WZ.Views.Nav.create({})
+
+WZ.ContentRouteManager = Em.RouteManager.extend
+  rootView: WZ.layout.get 'contentArea'
+  initialState: 'main.home'
+
+  main: Ember.ViewState.create
+    view: Ember.View.create
+      templateName: 'app/templates/home/main'
+
+    home: Ember.ViewState.create
+      view: Ember.View.create
+        templateName: 'app/templates/home/home'
+
+

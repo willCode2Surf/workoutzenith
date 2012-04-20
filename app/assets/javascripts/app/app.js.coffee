@@ -10,6 +10,9 @@ window.WZ = Ember.Application.create
   ready: ->
     return if window.env && window.env == 'jasmine'
     WZ.layout.appendTo('body')
-    @set 'route_manager', WZ.RouteManager.create()
-    @get('route_manager').start()
+    @set 'nav_route_manager', WZ.NavRouteManager.create()
+    @get('nav_route_manager').start()
+
+    @set 'content_route_manager', WZ.ContentRouteManager.create()
+    @get('content_route_manager').start()
 
