@@ -3,9 +3,15 @@ describe 'route manageer', ->
 
   describe 'root view', ->
     it 'should have a root view', ->
-      Ember.run =>
+      Ember.run ->
         @routeManager = WZ.RouteManager.create()
-        @routeManager.start()
 
-      console.log $('body').html() + 'some'
-      expect(@routeManager.get 'rootView').toBeTruthy()
+      #@routeManager.start()
+
+      #Ember.run =>
+        #@routeManager = WZ.RouteManager.create()
+        #@routeManager.start()
+        #expect(@routeManager.get 'initialState').toBeTruthy()
+
+      #console.log $('body').html() + 'some'
+      #expect(@routeManager.get 'initialState').toBeTruthy()
