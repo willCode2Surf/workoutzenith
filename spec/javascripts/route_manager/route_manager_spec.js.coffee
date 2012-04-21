@@ -30,8 +30,8 @@ describe 'route managers', ->
       Ember.run =>
         @routeManager = WZ.ContentRouteManager.create()
         @routeManager.start()
-        @routeManager.goToState 'main.home'
-        debugger
+        console.log @routeManager.getPath 'currentState.name'
+        #debugger
         @routeManager.goToState 'main.vault.index'
 
       console.log @routeManager.getPath 'currentState.name'
