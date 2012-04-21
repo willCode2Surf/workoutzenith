@@ -32,6 +32,7 @@ WZ.ContentRouteManager = Em.RouteManager.extend
         templateName: 'app/templates/vault/main'
 
       index: Ember.ViewState.create
+        route: 'main/vault/index'
         enter: (manager, transition) ->
           @_super(manager, transition)
           console.log 'in here for sure'

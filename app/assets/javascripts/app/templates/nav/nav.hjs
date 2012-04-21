@@ -18,8 +18,8 @@
               <b class="caret"/>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="#vault/new">New</a></li>
-              <li><a href="#vault/home">Home</a></li>
+              <li><a href="#main/vault/new">New</a></li>
+              <li><a href="#main/vault/index">Home</a></li>
             </ul>
           </li>
           <li>

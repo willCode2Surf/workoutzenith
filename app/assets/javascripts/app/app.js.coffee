@@ -14,7 +14,7 @@ window.WZ = Ember.Application.create
     @get('nav_route_manager').start()
 
     @set 'content_route_manager', WZ.ContentRouteManager.create()
-    #@get('content_route_manager').start()
-    @get('content_route_manager').goToState 'vault.index'
+    @get('content_route_manager').start()
+    #@get('content_route_manager').set 'location', 'main.vault.index'
 
 
