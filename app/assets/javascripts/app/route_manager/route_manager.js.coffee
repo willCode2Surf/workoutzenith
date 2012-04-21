@@ -17,6 +17,7 @@ WZ.NavRouteManager = Em.RouteManager.extend
 WZ.ContentRouteManager = Em.RouteManager.extend
   rootView: WZ.layout.get 'contentArea'
   initialState: 'main.home'
+  enableLogging: true
 
   main: Ember.ViewState.create
     view: Ember.View.create
@@ -25,5 +26,13 @@ WZ.ContentRouteManager = Em.RouteManager.extend
     home: Ember.ViewState.create
       view: Ember.View.create
         templateName: 'app/templates/home/home'
+
+    vault: Ember.ViewState.create
+      view: Ember.View.create
+        templateName: 'app/templates/vault/main'
+
+      index: Ember.ViewState.create
+        view: Ember.View.create
+          templates: 'app/templates/vault/home'
 
 
