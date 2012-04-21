@@ -20,6 +20,7 @@ WZ.ContentRouteManager = Em.RouteManager.extend
   enableLogging: true
 
   main: Ember.ViewState.create
+    route: 'main'
     view: Ember.View.create
       templateName: 'app/templates/home/main'
 
@@ -28,11 +29,12 @@ WZ.ContentRouteManager = Em.RouteManager.extend
         templateName: 'app/templates/home/home'
 
     vault: Ember.ViewState.create
+      route: 'vault'
       view: Ember.View.create
         templateName: 'app/templates/vault/main'
 
       index: Ember.ViewState.create
-        route: 'main/vault/index'
+        route: 'index'
         enter: (manager, transition) ->
           @_super(manager, transition)
           console.log 'in here for sure'
