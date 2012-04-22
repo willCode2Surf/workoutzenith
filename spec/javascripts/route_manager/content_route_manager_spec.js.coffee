@@ -25,3 +25,10 @@ describe 'route managers', ->
 
       expect(@routeManager.getPath 'currentState.name').toEqual 'index'
 
+    it 'should transition to new vault', ->
+      Ember.run =>
+        @routeManager.set 'location', 'vault/new/step1'
+
+      expect(@routeManager.getPath 'currentState.name').toEqual 'step1'
+
+
