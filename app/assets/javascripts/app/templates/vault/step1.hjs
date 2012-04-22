@@ -15,7 +15,7 @@
       <label>Exercise Description</label>
       <textarea class="input span6" rows="6" placeholder="Enter the steps to complete the exercise"></textarea>
       <div class="pull-right">
-        {{#view Ember.Button targetBinding="WZ.ContentRouteManager" action="addMedia"}}Add Media{{/view}}
+        <a id="mediaAdd" href="#" class="btn btn-primary large" {{action "addMedia" target="WZ.ContentRouteManager"}}>Add Media</a>
       </div>
     </div>
   </div>
