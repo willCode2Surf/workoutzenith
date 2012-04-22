@@ -1,6 +1,6 @@
 <div class="hero-unit" id="main">
 <div class="row-fluid">
-  <div class="span6">
+  <div class="span6 hidden-phone">
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item">
@@ -16,6 +16,12 @@
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
     </div>
+  </div>
+  <div class="span5 pull-right">
+    <h3>Workout Zenith</h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&quot;s 
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of typei.    
+    </p>
   </div>
 </div>
 
