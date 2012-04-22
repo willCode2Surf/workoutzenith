@@ -31,4 +31,11 @@ describe 'route managers', ->
 
       expect(@routeManager.getPath 'currentState.name').toEqual 'step1'
 
+    it 'should transition location from addMedia action', ->
+      Ember.run =>
+        @routeManager.send 'addMedia'
+      
+      expect(@routeManager.getPath 'currentState.name').toEqual 'step2'
+
+      
 
