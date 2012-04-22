@@ -1,1 +1,23 @@
-<div id="home">This is home</div>
+<div class="row-fluid" id="home">
+  <div class="span1">
+    <img alt="cusomise" src="/assets/home/icon-response.png"/>
+  </div>
+  <div class="span3">
+    <h3>Customisable Program</h3>
+    <p>Adjust your program on a daily basis.</p>
+  </div>
+  <div class="span1">
+    <img alt="cusomise" src="/assets/home/icon-custom.png"/>
+  </div>
+  <div class="span3">
+    <h3>Track Your Progress</h3>
+    <p>Know where you are at any time</p>
+  </div>
+  <div class="span1">
+    <img alt="cusomise" src="/assets/home/icon-custom.png"/>
+  </div>
+  <div class="span3">
+    <h3>Support</h3>
+    <p>We reply to all questions.  Go ahead and ask us.</p>
+  </div>
+</div>
