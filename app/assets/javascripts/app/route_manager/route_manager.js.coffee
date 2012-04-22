@@ -50,7 +50,6 @@ WZ.ContentRouteManager = Em.RouteManager.extend
           templateName: 'app/templates/vault/step1'
 
         addMedia: (manager, context) ->
-          console.log 'in there captain'
           manager.set 'location', 'vault/new/step2'
 
       step2: Ember.ViewState.create
