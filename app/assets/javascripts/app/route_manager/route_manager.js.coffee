@@ -17,7 +17,7 @@ WZ.NavRouteManager = Em.RouteManager.extend
 WZ.ContentRouteManager = Em.RouteManager.extend
   rootView: WZ.layout.get 'contentArea'
   initialState: 'main.home'
-  enableLogging: true
+  enableLogging: false
 
   main: Ember.ViewState.create
     route: 'main'
