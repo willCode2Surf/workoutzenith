@@ -1,1 +1,9 @@
-<strong>New Vault</strong>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <h2>New Exercise</h2>
+      <hr/>
+    </div>
+  </div>
+</div>
+

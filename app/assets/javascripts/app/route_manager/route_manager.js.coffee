@@ -43,7 +43,7 @@ WZ.ContentRouteManager = Em.RouteManager.extend
     new: Ember.ViewState.create
       route: 'new'
       view: Ember.View.create
-        templateName: 'app/templates/vault/home'
+        templateName: 'app/templates/vault/new'
       step1: Ember.ViewState.create
         route: 'step1'
         view: Ember.View.create
