@@ -2,6 +2,21 @@
   <div class="row-fluid">
     <div class="span6">
       <h3>Step1 - Exercise Detail</h3>
+      <label>Exercise Name</label>
+      <input type="text" class="span6" placeholder="e.g. Preacher curls"/>
+      <label>Muscle Group</label>
+      <select class="span6">
+        <option>Abs</option>
+        <option>Arms</option>
+        <option>Back</option>
+        <option>Chest</option>
+        <option>Legs</option>
+      </select>
+      <label>Exercise Description</label>
+      <textarea class="input span6" rows="6" placeholder="Enter the steps to complete the exercise"></textarea>
+      <div class="pull-right">
+        <button class="btn btn-primary">Add Media</button>
+      </div>
     </div>
   </div>
 </div>
