@@ -12,7 +12,7 @@ WZ.NavRouteManager = Em.RouteManager.extend
   initialState: "nav"
 
   nav: Ember.ViewState.create
-    view: WZ.Views.Nav.create({})
+    view: WZ.Views.Nav
 
 WZ.ContentRouteManager = Em.RouteManager.extend
   rootView: WZ.layout.get 'contentArea'
@@ -20,7 +20,7 @@ WZ.ContentRouteManager = Em.RouteManager.extend
   enableLogging: false
 
   main: Ember.ViewState.create
-    route: 'main'
+    route: 'home'
     view: Ember.View.create
       templateName: 'app/templates/home/main'
 
@@ -28,15 +28,15 @@ WZ.ContentRouteManager = Em.RouteManager.extend
       view: Ember.View.create
         templateName: 'app/templates/home/home'
 
-    vault: Ember.ViewState.create
-      route: 'vault'
-      view: Ember.View.create
-        templateName: 'app/templates/vault/main'
+  vault: Ember.ViewState.create
+    route: 'vault'
+    view: Ember.View.create
+      templateName: 'app/templates/vault/main'
 
-      index: Ember.ViewState.create
-        route: 'index'
-        enter: (manager, transition) ->
-          @_super(manager, transition)
-          console.log 'in here for sure'
-        view: Ember.View.create
-          templateName: 'app/templates/vault/home'
+    index: Ember.ViewState.create
+      route: 'index'
+      enter: (manager, transition) ->
+        @_super(manager, transition)
+        #console.log 'in here for sure'
+      view: Ember.View.create
+        templateName: 'app/templates/vault/home'
