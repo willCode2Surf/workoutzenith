@@ -18,3 +18,4 @@ window.WZ = Ember.Application.create
     @get('content_route_manager').start()
 
 
+
