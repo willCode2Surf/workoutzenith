@@ -13,6 +13,7 @@ window.WZ = Ember.Application.create
     @set 'nav_route_manager', WZ.NavRouteManager.create()
     @get('nav_route_manager').start()
 
+
     @set 'content_route_manager', WZ.ContentRouteManager.create()
     @get('content_route_manager').start()
 
