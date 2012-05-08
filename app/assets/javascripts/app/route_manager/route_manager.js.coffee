@@ -5,7 +5,6 @@ WZ.layout =  Ember.ContainerView.create
   childViews: ['navigationArea', 'contentArea']
   navigationArea: Ember.ContainerView.create({})
   contentArea: Ember.ContainerView.create({})
-    
 
 WZ.NavRouteManager = Em.RouteManager.extend
   rootView: WZ.layout.get 'navigationArea'

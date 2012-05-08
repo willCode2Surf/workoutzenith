@@ -1,0 +1,2 @@
+WZ.Helpers.Common = {}
+

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -9,8 +10,9 @@ end
 gem 'jquery-rails'
 
 # structures
-gem 'json',                 '~> 1.6.3'
-gem 'rabl',                 '~> 0.5.1'
+gem 'json'
+gem 'multi_json'
+gem 'rabl'
 
 # use thin instead of WEBrick
 gem 'thin'
@@ -19,14 +21,11 @@ gem 'thin'
 gem 'bson_ext'
 gem 'mongoid'
 
-
 gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "bootstrap-sass", ">= 2.0.1"
 
-# MongoDB..
-gem 'bson_ext'
-gem 'mongoid'
+gem 'inherited_resources'
 
 group :development, :test do
   gem 'guard'
