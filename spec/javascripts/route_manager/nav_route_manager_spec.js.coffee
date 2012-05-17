@@ -5,7 +5,6 @@ describe 'route managers', ->
     beforeEach ->
       Ember.run =>
         @routeManager = WZ.NavRouteManager.create()
-        @routeManager.start()
 
     afterEach ->
       @routeManager.destroy() if @routeManager

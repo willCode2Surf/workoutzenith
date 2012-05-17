@@ -6,7 +6,7 @@ WZ.layout =  Ember.ContainerView.create
   navigationArea: Ember.ContainerView.create({})
   contentArea: Ember.ContainerView.create({})
 
-WZ.NavRouteManager = Em.RouteManager.extend
+WZ.NavRouteManager = Ember.StateManager.extend
   rootView: WZ.layout.get 'navigationArea'
   initialState: "nav"
 
@@ -36,7 +36,6 @@ WZ.ContentRouteManager = Em.RouteManager.extend
       route: 'index'
       enter: (manager, transition) ->
         @_super(manager, transition)
-        #console.log 'in here for sure'
       view: Ember.View.create
         templateName: 'app/templates/vault/home'
     new: Ember.ViewState.create
