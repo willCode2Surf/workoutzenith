@@ -1,11 +1,17 @@
 describe 'router', ->
   describe 'content router', ->
-    it 'should have a root route', ->
+    beforeEach ->
       Ember.run =>
         @router = WZ.Router.create()
+        WZ.initialize @router
 
-      expect(@router).toBeTruthy()
-      console.log @router.getPath('currentState.name')      
+    it 'should have inject controllers into application', ->
+      expect(@router.applicationController).toBeTruthy()
+      expect(@router.vaultController).toBeTruthy()
+      expect(@router.homeController).toBeTruthy()
+
+    it 'should have a root view', ->
+      expect(@router.rootView).toBeTruthy()
 
 # describe 'route managers', ->
 #   @routeManager

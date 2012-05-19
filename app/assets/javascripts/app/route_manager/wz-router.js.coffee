@@ -1,11 +1,12 @@
 WZ.Router = Ember.Router.extend
   root: Ember.State.extend
     setupControllers: (router) ->
-      console.log 'in there'
+      console.log 'in root'
 
     index: Ember.State.extend
       route: '/'
-      redirectTo: 'home/index'
+      setupControllers: (router) ->
+        console.log 'in index'
 
 
 # WZ.ContentRouteManager = Em.RouteManager.extend

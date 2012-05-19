@@ -1,1 +1,1 @@
-WZ.Controllers.Home = Ember.Object.extend({})
+WZ.HomeController = Ember.Object.extend({})

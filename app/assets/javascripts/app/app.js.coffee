@@ -1,7 +1,6 @@
 Ember.ENV.CP_DEFAULT_CACHEABLE = true
 Ember.ENV.VIEW_PRESERVES_CONTEXT = true
 window.WZ = Ember.Application.create
-  Controllers: {}
   Helpers: {}
   Models: {}
   StateManagers: {}
@@ -18,12 +17,12 @@ window.WZ = Ember.Application.create
       revision: 4
 
     return if window.env && window.env == 'jasmine'
+
     @set 'nav_route_manager', WZ.NavRouteManager.create()
-    # @get('nav_route_manager').start()
 
-
-    @set 'content_route_manager', WZ.ContentRouteManager.create()
-    # @get('content_route_manager').start()
+    WZ.set 'router', WZ.Router.create()
+    WZ.initialize WZ.get('router')
+    WZ.get('router').transitionTo('root')
 
 
 

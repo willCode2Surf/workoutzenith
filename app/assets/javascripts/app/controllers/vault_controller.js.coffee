@@ -1,1 +1,1 @@
-WZ.Controllers.Vault = Ember.Object.extend({})
+WZ.VaultController = Ember.Object.extend({})
