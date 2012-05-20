@@ -2,12 +2,29 @@ WZ.Router = Ember.Router.extend
   root: Ember.State.extend
     setupControllers: (router) ->
       console.log 'in root'
+      applicationController = router.get 'applicationController'
+
+      rootView = Ember.ContainerView.create
+        controller : applicationController
+        currentViewBinding: 'controller.view'
+
+      homeController = router.get 'homeController'
+
+      applicationController.set 'view', Ember.View.create
+                                    templateName: 'app/templates/home/main',
+                                    controller: homeController
+      rootView.appendTo 'body'
+      router.transitionTo 'index'
 
     index: Ember.State.extend
       route: '/'
       setupControllers: (router) ->
         console.log 'in index'
+        
+        homeController = router.get 'homeController'
 
+        homeController.set 'view', Ember.View.create
+                                    templateName: 'app/templates/home/home'
 
 # WZ.ContentRouteManager = Em.RouteManager.extend
 #   rootView: WZ.layout.get 'contentArea'

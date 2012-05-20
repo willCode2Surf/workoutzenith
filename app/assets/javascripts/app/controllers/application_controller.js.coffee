@@ -1,1 +1,2 @@
-WZ.ApplicationController = Ember.Object.extend({})
+WZ.ApplicationController = Ember.Object.extend
+  view: null

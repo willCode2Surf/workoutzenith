@@ -11883,7 +11883,7 @@ Ember.Application = Ember.Namespace.extend(
         ...
       });
 
-      App.injectControllers(stateManager);
+      App.initialize(stateManager);
 
       stateManager.get('postsController')     // <App.PostsController:ember1234>
       stateManager.get('commentsController')  // <App.CommentsController:ember1235>
@@ -16564,7 +16564,7 @@ Ember._RouteMatcher = Ember.Object.extend({
         escaped;
 
     // Strip off leading slash if present
-    if (route[0] === '/') {
+    if (route.charAt(0) === '/') {
       route = this.route = route.substr(1);
     }
 
@@ -16715,7 +16715,7 @@ Ember.State.reopen(Ember.Routable);
 (function() {
 Ember.Router = Ember.StateManager.extend({
   route: function(path) {
-    if (path[0] === '/') {
+    if (path.charAt(0) === '/') {
       path = path.substr(1);
     }
 

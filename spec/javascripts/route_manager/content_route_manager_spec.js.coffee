@@ -5,7 +5,7 @@ describe 'router', ->
         @router = WZ.Router.create()
         WZ.initialize @router
 
-    it 'should have inject controllers into application', ->
+    it 'should inject controllers into router', ->
       expect(@router.applicationController).toBeTruthy()
       expect(@router.vaultController).toBeTruthy()
       expect(@router.homeController).toBeTruthy()
