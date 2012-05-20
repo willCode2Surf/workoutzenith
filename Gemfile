@@ -23,7 +23,7 @@ gem 'mongoid'
 
 gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development
-gem "bootstrap-sass", ">= 2.0.1"
+gem "bootstrap-sass", ">= 2.0.3"
 
 gem 'inherited_resources'
 

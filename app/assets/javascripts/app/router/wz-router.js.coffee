@@ -65,7 +65,23 @@ WZ.Router = Ember.Router.extend
           exercisesController = router.get 'exercisesController'
 
           exercisesController.set 'view', Ember.View.create
+                                            controller: exercisesController
                                             templateName: 'app/templates/vault/step1'
+                                            contentBinding: 'controller.exercise'
+                                            didInsertElement: ->
+                                              $('#exercise_name').focus()
+
+        addMedia: (e) ->
+          exercisesController = e.get 'exercisesController'
+
+          exercisesController.set 'view', Ember.View.create
+                                            templateName: 'app/templates/vault/step2'
+
+
+  
+
+
+
 
 # WZ.ContentRouteManager = Em.RouteManager.extend
 #   rootView: WZ.layout.get 'contentArea'

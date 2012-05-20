@@ -1,14 +1,13 @@
 @import 'partials/nav';
 @import 'partials/step1';
 
-.block.small.center{
+@mixin center-block() {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-// .container-fluid {
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+.container-fluid {
+  @include center-block;
+}
 

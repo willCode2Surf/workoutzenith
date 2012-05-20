@@ -26,6 +26,7 @@
                 There are currently no exercises in the vault.<br/>Click <a href="#vault/new/step1">here</a> to add a new exercise.
                 -->
                 There are currently no exercises in the vault.<br/>Click <a {{action "newExercise"}} href="#">here</a> to add a new exercise.
+                width: 100%;
               </p>
             </div>
           </div>
