@@ -19,6 +19,12 @@ describe 'router', ->
         @router.transitionTo 'vault'
       expect(@router.getPath('currentState.path')).toEqual 'root.vault.index'
 
+    it 'should transition to new vault', ->
+      Ember.run =>
+        @router.transitionTo 'vault.new'
+      expect(@router.getPath('currentState.path')).toEqual 'root.vault.new'
+
+
 # describe 'route managers', ->
 #   @routeManager
 # 

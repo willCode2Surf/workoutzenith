@@ -13,6 +13,7 @@ WZ.Router = Ember.Router.extend
       applicationController.set 'view', Ember.View.create
                                     templateName: 'app/templates/home/main',
                                     controller: homeController
+
       rootView.appendTo 'body'
       router.transitionTo 'index'
 
@@ -27,6 +28,11 @@ WZ.Router = Ember.Router.extend
                                     templateName: 'app/templates/home/home'
 
         console.log router.getPath 'currentState.path'
+        
+      newExercise: (e) ->
+        e.transitionTo 'vault'
+        e.transitionTo 'new'
+
 
     vault: Ember.State.extend
       route: '/vault'
@@ -45,13 +51,21 @@ WZ.Router = Ember.Router.extend
       index: Ember.State.extend
         route: '/'
         setupControllers: (router) ->
+          console.log 'in vault.index'
+          
           exercisesController = router.get 'exercisesController'
 
           exercisesController.set 'view', Ember.View.create
                                             templateName: 'app/templates/vault/home'
-          
 
+      new: Ember.State.extend
+        route: '/new'
+        setupControllers: (router) ->
+          console.log 'in vault.new'
+          exercisesController = router.get 'exercisesController'
 
+          exercisesController.set 'view', Ember.View.create
+                                            templateName: 'app/templates/vault/step1'
 
 # WZ.ContentRouteManager = Em.RouteManager.extend
 #   rootView: WZ.layout.get 'contentArea'
