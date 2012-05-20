@@ -26,6 +26,33 @@ WZ.Router = Ember.Router.extend
         homeController.set 'view', Ember.View.create
                                     templateName: 'app/templates/home/home'
 
+        console.log router.getPath 'currentState.path'
+
+    vault: Ember.State.extend
+      route: '/vault'
+      setupControllers: (router) ->
+        console.log 'in vault'
+        appController = router.get 'applicationController'
+
+        exercisesController = router.get 'exercisesController'
+
+        appController.set 'view', Ember.View.create
+                                    templateName: 'app/templates/vault/main',
+                                    controller: exercisesController
+        
+        router.transitionTo 'index'
+
+      index: Ember.State.extend
+        route: '/'
+        setupControllers: (router) ->
+          exercisesController = router.get 'exercisesController'
+
+          exercisesController.set 'view', Ember.View.create
+                                            templateName: 'app/templates/vault/home'
+          
+
+
+
 # WZ.ContentRouteManager = Em.RouteManager.extend
 #   rootView: WZ.layout.get 'contentArea'
 #   initialState: 'main.home'

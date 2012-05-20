@@ -4,14 +4,20 @@ describe 'router', ->
       Ember.run =>
         @router = WZ.Router.create()
         WZ.initialize @router
+        @router.transitionTo 'root'
 
     it 'should inject controllers into router', ->
       expect(@router.applicationController).toBeTruthy()
-      expect(@router.vaultController).toBeTruthy()
+      expect(@router.exercisesController).toBeTruthy()
       expect(@router.homeController).toBeTruthy()
 
     it 'should have a root view', ->
-      expect(@router.rootView).toBeTruthy()
+      expect(@router.getPath('currentState.path')).toEqual 'root.index'
+
+    it 'should transition to vault', ->
+      Ember.run =>
+        @router.transitionTo 'vault'
+      expect(@router.getPath('currentState.path')).toEqual 'root.vault.index'
 
 # describe 'route managers', ->
 #   @routeManager
