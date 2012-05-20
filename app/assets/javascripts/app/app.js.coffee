@@ -23,6 +23,8 @@ window.WZ = Ember.Application.create
     WZ.set 'router', WZ.Router.create()
     WZ.initialize WZ.get('router')
     WZ.get('router').transitionTo('root')
+    WZ.get('router').transitionTo('vault')
+    WZ.get('router').transitionTo('new')
 
 
 

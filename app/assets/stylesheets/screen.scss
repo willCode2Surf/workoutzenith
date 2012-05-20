@@ -1,7 +1,14 @@
 @import 'partials/nav';
 @import 'partials/step1';
 
-.container-fluid {
+.block.small.center{
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
+// .container-fluid {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
