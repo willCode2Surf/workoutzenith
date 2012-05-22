@@ -1714,7 +1714,7 @@ if ('undefined' === typeof Ember) {
 /**
   @namespace
   @name Ember
-  @version 0.9.7.1
+  @version 0.9.8
 
   All Ember methods and functions are defined inside of this namespace.
   You generally should not add new properties to this namespace as it may be
@@ -1753,10 +1753,10 @@ Ember.toString = function() { return "Ember"; };
 /**
   @static
   @type String
-  @default '0.9.7.1'
+  @default '0.9.8'
   @constant
 */
-Ember.VERSION = '0.9.7.1';
+Ember.VERSION = '0.9.8';
 
 /**
   @static
@@ -1806,28 +1806,26 @@ Ember.SHIM_ES5 = (Ember.ENV.SHIM_ES5 === false) ? false : Ember.EXTEND_PROTOTYPE
 /**
   @static
   @type Boolean
-  @default false
+  @default true
   @constant
 
   Determines whether computed properties are cacheable by default.
-  In future releases this will default to `true`. For the 1.0 release,
-  the option to turn off caching by default will be removed entirely.
+  This option will be removed for the 1.1 release.
 
   When caching is enabled by default, you can use `volatile()` to disable
   caching on individual computed properties.
 */
-Ember.CP_DEFAULT_CACHEABLE = !!Ember.ENV.CP_DEFAULT_CACHEABLE;
+Ember.CP_DEFAULT_CACHEABLE = (Ember.ENV.CP_DEFAULT_CACHEABLE !== false);
 
 /**
   @static
   @type Boolean
-  @default false
+  @default true
   @constant
 
   Determines whether views render their templates using themselves
-  as the context, or whether it is inherited from the parent. In
-  future releases, this will default to `true`. For the 1.0 release,
-  the option to have views change context by default will be removed entirely.
+  as the context, or whether it is inherited from the parent. This option
+  will be removed in the 1.1 release.
 
   If you need to update your application to use the new context rules, simply
   prefix property access with `view.`:
@@ -1852,7 +1850,7 @@ Ember.CP_DEFAULT_CACHEABLE = !!Ember.ENV.CP_DEFAULT_CACHEABLE;
         {{/view}}
       {{/each}}
 */
-Ember.VIEW_PRESERVES_CONTEXT = !!Ember.ENV.VIEW_PRESERVES_CONTEXT;
+Ember.VIEW_PRESERVES_CONTEXT = (Ember.ENV.VIEW_PRESERVES_CONTEXT !== false);
 
 /**
   Empty function.  Useful for some operations.
@@ -1884,6 +1882,7 @@ if ('undefined' === typeof ember_assert) { window.ember_assert = Ember.K; }
 if ('undefined' === typeof ember_warn) { window.ember_warn = Ember.K; }
 if ('undefined' === typeof ember_deprecate) { window.ember_deprecate = Ember.K; }
 if ('undefined' === typeof ember_deprecateFunc) {
+  /** @private */
   window.ember_deprecateFunc = function(_, func) { return func; };
 }
 
@@ -12092,7 +12091,7 @@ Ember.Location = {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 
-Ember.assert("Ember requires jQuery 1.6 or 1.7", window.jQuery && window.jQuery().jquery.match(/^1\.[67](\.\d+)?(pre|rc\d?)?/));
+Ember.assert("Ember Views require jQuery 1.6 or 1.7", window.jQuery && window.jQuery().jquery.match(/^1\.[67](\.\d+)?(pre|rc\d?)?/));
 Ember.$ = window.jQuery;
 
 })();
@@ -16007,7 +16006,7 @@ var get = Ember.get, set = Ember.set, getPath = Ember.getPath, fmt = Ember.Strin
             return 'passive';
           }
         }.property(),
-        active: Ember.State.create({})
+        active: Ember.State.create({}),
         passive: Ember.State.create({})
       })
 
@@ -16018,7 +16017,7 @@ var get = Ember.get, set = Ember.set, getPath = Ember.getPath, fmt = Ember.Strin
   Calling `goToState` transitions between states:
 
        robotManager = Ember.StateManager.create({
-        initialState: 'poweredDown',
+         initialState: 'poweredDown',
          poweredDown: Ember.State.create({}),
          poweredUp: Ember.State.create({})
        })
@@ -16036,7 +16035,7 @@ var get = Ember.get, set = Ember.set, getPath = Ember.getPath, fmt = Ember.Strin
   an object representing the transition as its second argument.
 
       robotManager = Ember.StateManager.create({
-       initialState: 'poweredDown',
+        initialState: 'poweredDown',
         poweredDown: Ember.State.create({
           exit: function(stateManager, transition){
             console.log("exiting the poweredDown state")
@@ -16061,7 +16060,7 @@ var get = Ember.get, set = Ember.set, getPath = Ember.getPath, fmt = Ember.Strin
   manager does not have will result in no changes in the StateManager's current state:
 
       robotManager = Ember.StateManager.create({
-       initialState: 'poweredDown',
+        initialState: 'poweredDown',
         poweredDown: Ember.State.create({
           exit: function(stateManager, transition){
             console.log("exiting the poweredDown state")
@@ -16092,7 +16091,7 @@ var get = Ember.get, set = Ember.set, getPath = Ember.getPath, fmt = Ember.Strin
 
 
       robotManager = Ember.StateManager.create({
-        initialState: 'poweredDown',
+         initialState: 'poweredDown',
          poweredDown: Ember.State.create({
            charging: Ember.State.create(),
            charged: Ember.State.create()
@@ -16125,7 +16124,7 @@ var get = Ember.get, set = Ember.set, getPath = Ember.getPath, fmt = Ember.Strin
     only when transitioning to a new section of possible states in the hierarchy.
 
        robotManager = Ember.StateManager.create({
-         initialState: 'poweredDown',
+          initialState: 'poweredDown',
           poweredDown: Ember.State.create({
             enter: function(){},
             exit: function(){
@@ -16249,7 +16248,7 @@ var get = Ember.get, set = Ember.set, getPath = Ember.getPath, fmt = Ember.Strin
   StateManager.
 
         robotManager = Ember.StateManager.create({
-          initialState: 'poweredDown.charging',
+           initialState: 'poweredDown.charging',
            poweredDown: Ember.State.create({
              charging: Ember.State.create({
                 chargeComplete: function(manager, context){
@@ -17493,6 +17492,8 @@ Ember.ViewState = Ember.State.extend({
   @description Helpers for Handlebars templates
 */
 
+Ember.assert("Ember Handlebars requires Handlebars 1.0.beta.5 or greater", window.Handlebars && window.Handlebars.VERSION.match(/^1\.0\.beta\.[56789]$/));
+
 /**
   @class
 
@@ -18009,6 +18010,7 @@ var EmberHandlebars = Ember.Handlebars, helpers = EmberHandlebars.helpers;
 
 // Binds a property into the DOM. This will create a hook in DOM that the
 // KVO system will look for and update if the property changes.
+/** @private */
 var bind = function(property, options, preserveContext, shouldDisplay, valueNormalizer) {
   var data = options.data,
       fn = options.fn,

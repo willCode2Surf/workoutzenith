@@ -44,4 +44,5 @@ group :test do
   gem 'guard-jasmine', :git => "https://github.com/netzpirat/guard-jasmine.git", :branch => 'master'
   gem 'capybara',          '~> 1.1.2'
   gem 'fivemat'
+  gem 'json_spec'
 end
