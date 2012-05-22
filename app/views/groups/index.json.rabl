@@ -1,2 +1,2 @@
-collection @group
-attributes :id, :name
+collection @groups
+attributes :_id, :name

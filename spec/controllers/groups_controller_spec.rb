@@ -7,8 +7,8 @@ describe GroupsController do
     it 'returns a list of groups in json' do
       Group.stub(:all).and_return(groups)
       get :index, :format => :json
-      puts json_response
-      json_response.should have_json_path("name")
+      json = ActiveSupport::JSON.decode(response.body)
+      json.size.should equal(1)
     end
   end
 end
