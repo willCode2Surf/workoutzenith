@@ -12,7 +12,7 @@ window.WZ = Ember.Application.create
     WZ.layout.appendTo('body')
 
     WZ.store = DS.Store.create
-      adapter: DS.RESTAdapter.create
+      adapter: WZ.DataAdapter.create
         bulkCommit: false
       revision: 4
 
