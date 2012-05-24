@@ -1,6 +1,5 @@
 WZ.Group = DS.Model.extend WZ.Helpers.Common,
-  primaryKey: 'id'
-  id: DS.attr 'number'
+  primaryKey: '_id'
   name: DS.attr 'string'
 
 WZ.Group.reopenClass

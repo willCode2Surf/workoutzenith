@@ -78,7 +78,13 @@ WZ.Router = Ember.Router.extend
                                             templateName: 'app/templates/vault/step2'
 
 
-  
+        save: (e) ->
+          exercisesController = e.get 'exercisesController'
+
+          WZ.store.createRecord WZ.exercise, exercisesController.get 'exercise'
+
+          WZ.store.commit()
+
 
 
 

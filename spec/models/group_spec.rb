@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Group do
-
   let(:group){ FactoryGirl.create(:group) }
 
   context "#to_json" do
