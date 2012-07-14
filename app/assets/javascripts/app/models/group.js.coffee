@@ -1,4 +1,4 @@
-WZ.Group = DS.Model.extend WZ.Helpers.Common,
+WZ.Group = DS.Model.extend
   primaryKey: '_id'
   name: DS.attr 'string'
 

@@ -1,89 +1,79 @@
-WZ.Router = Ember.Router.extend
-  root: Ember.State.extend
-    connectOutlets: (router, context) ->
-      alert 'in root'
-      applicationController = router.get 'applicationController'
-
-      rootView = Ember.ContainerView.create
-        controller : applicationController
-        currentViewBinding: 'controller.view'
-
-      homeController = router.get 'homeController'
-
-      applicationController.set 'view', Ember.View.create
-                                    templateName: 'app/templates/home/main',
-                                    controller: homeController
-
-      rootView.appendTo 'body'
-      router.transitionTo 'index'
-
+WZ.Router = Em.Router.extend
+  enableLogging: true
+  location: 'hash'
+  root: Em.State.extend
     index: Ember.State.extend
       route: '/'
-      connectOutlets: (router) ->
-        alert 'in index'
-        
-        homeController = router.get 'homeController'
+      redirectsTo: 'home'
+    home: Em.State.extend
+      route: '/home'
+      connectOutlets: (router, event) ->
+        alert 'got here'
+    #   connectOutlets: (router, event) ->
+    #     alert 'in index'
+    #     
+    #     homeController = router.get 'homeController'
 
-        homeController.set 'view', Ember.View.create
-                                    templateName: 'app/templates/home/home'
+    #     homeController.set 'view', Ember.View.create
+    #                                 templateName: 'app/templates/home/home'
 
-        console.log router.getPath 'currentState.path'
-        
-      newExercise: (e) ->
-        e.transitionTo 'vault'
-        e.transitionTo 'new'
-
-
-    vault: Ember.State.extend
-      route: '/vault'
-      setupControllers: (router) ->
-        console.log 'in vault'
-        appController = router.get 'applicationController'
-
-        exercisesController = router.get 'exercisesController'
-
-        appController.set 'view', Ember.View.create
-                                    templateName: 'app/templates/vault/main',
-                                    controller: exercisesController
-        
-        router.transitionTo 'index'
-
-      index: Ember.State.extend
-        route: '/'
-        setupControllers: (router) ->
-          console.log 'in vault.index'
-          
-          exercisesController = router.get 'exercisesController'
-
-          exercisesController.set 'view', Ember.View.create
-                                            templateName: 'app/templates/vault/home'
-
-      new: Ember.State.extend
-        route: '/new'
-        setupControllers: (router) ->
-          console.log 'in vault.new'
-          exercisesController = router.get 'exercisesController'
-
-          exercisesController.set 'view', Ember.View.create
-                                            controller: exercisesController
-                                            templateName: 'app/templates/vault/step1'
-                                            contentBinding: 'controller.exercise'
-                                            didInsertElement: ->
-                                              $('#exercise_name').focus()
-
-        addMedia: (e) ->
-          exercisesController = e.get 'exercisesController'
-
-          exercisesController.set 'view', Ember.View.create
-                                            templateName: 'app/templates/vault/step2'
+    #     console.log router.getPath 'currentState.path'
+    #     
+    #   newExercise: (e) ->
+    #     e.transitionTo 'vault'
+    #     e.transitionTo 'new'
 
 
-        save: (e) ->
-          exercisesController = e.get 'exercisesController'
+    # vault: Ember.State.extend
+    #   route: '/vault'
+    #   setupControllers: (router) ->
+    #     console.log 'in vault'
+    #     appController = router.get 'applicationController'
 
-          WZ.store.createRecord WZ.exercise, exercisesController.get 'exercise'
+    #     exercisesController = router.get 'exercisesController'
 
-          WZ.store.commit()
+    #     appController.set 'view', Ember.View.create
+    #                                 templateName: 'app/templates/vault/main',
+    #                                 controller: exercisesController
+    #     
+    #     router.transitionTo 'index'
+
+    #   index: Ember.State.extend
+    #     route: '/'
+    #     setupControllers: (router) ->
+    #       console.log 'in vault.index'
+    #       
+    #       exercisesController = router.get 'exercisesController'
+
+    #       exercisesController.set 'view', Ember.View.create
+    #                                         templateName: 'app/templates/vault/home'
+
+    #   new: Ember.State.extend
+    #     route: '/new'
+    #     setupControllers: (router) ->
+    #       console.log 'in vault.new'
+    #       exercisesController = router.get 'exercisesController'
+
+    #       exercisesController.set 'view', Ember.View.create
+    #                                         controller: exercisesController
+    #                                         templateName: 'app/templates/vault/step1'
+    #                                         contentBinding: 'controller.exercise'
+    #                                         didInsertElement: ->
+    #                                           $('#exercise_name').focus()
+
+    #     addMedia: (e) ->
+    #       exercisesController = e.get 'exercisesController'
+
+    #       exercisesController.set 'view', Ember.View.create
+    #                                         templateName: 'app/templates/vault/step2'
+
+
+    #     save: (e) ->
+    #       exercisesController = e.get 'exercisesController'
+
+    #       WZ.store.createRecord WZ.exercise, exercisesController.get 'exercise'
+
+    #       WZ.store.commit()
 
 
 
