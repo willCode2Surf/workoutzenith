@@ -9,8 +9,6 @@ window.WZ = Ember.Application.create
   #rootElement: '#main'
 
   ready: ->
-    WZ.layout.appendTo('body')
-
     WZ.store = DS.Store.create
       adapter: WZ.DataAdapter.create
         bulkCommit: false
@@ -18,13 +16,8 @@ window.WZ = Ember.Application.create
 
     return if window.env && window.env == 'jasmine'
 
-    @set 'nav_route_manager', WZ.NavRouteManager.create()
+    WZ.set 'Router', WZ.Router.create()
 
-    WZ.set 'router', WZ.Router.create()
-    WZ.initialize WZ.get('router')
-    WZ.get('router').transitionTo('root')
-    WZ.get('router').transitionTo('vault')
-    WZ.get('router').transitionTo('new')
 
 
 

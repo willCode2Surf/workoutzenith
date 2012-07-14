@@ -1,7 +1,7 @@
 WZ.Router = Ember.Router.extend
   root: Ember.State.extend
-    setupControllers: (router) ->
-      console.log 'in root'
+    connectOutlets: (router, context) ->
+      alert 'in root'
       applicationController = router.get 'applicationController'
 
       rootView = Ember.ContainerView.create
@@ -19,8 +19,8 @@ WZ.Router = Ember.Router.extend
 
     index: Ember.State.extend
       route: '/'
-      setupControllers: (router) ->
-        console.log 'in index'
+      connectOutlets: (router) ->
+        alert 'in index'
         
         homeController = router.get 'homeController'
 
