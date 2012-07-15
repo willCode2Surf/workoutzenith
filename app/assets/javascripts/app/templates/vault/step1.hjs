@@ -1,38 +1,34 @@
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div id="step1" class="span8">
-      <form class="form-horizontal">
-        <h3>Step1 - Exercise Detail</h3>
-        <fieldset>
-          <div class="control-group">
-            <label class="control-label" for="exercise_name">Exercise Name</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="exercise_name" {{bindAttr value="content.name"}} placeholder="e.g. Preacher curls"/>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="exercise_group">Muscle Group</label>
-            <div class="controls">
-              {{view Ember.Select
-                contentBinding="controller.groups"
-                selectionBinding="controller.group"
-                optionLabelPath="content.name"
-                optionValuePath="content._id"}}
-            </div>
-          </div>
-          <div class="control-group" for="exercise_description">
-            <label class="control-label" id="exercise_description">Exercise Description</label>
-            <div class="controls">
-              <textarea class="input span6" {{bindAttr value="content.description"}} rows="6" placeholder="Enter the steps to complete the exercise"></textarea>
-            </div>
-          </div>
-          <div class="form-actions">
-            <!--<a id="mediaAdd" href="#vault/new/step2" class="btn btn-primary large">Add Media</a>-->
-            <a id="mediaAdd" {{action "addMedia"}} class="btn btn-primary large">Add Media</a>
-            <a class="btn btn-primary large" {{action "save"}}>Save</a>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-  </div>
+<div id="step1" class="span8">
+  <form class="form-horizontal">
+    <h3>Step1 - Exercise Detail</h3>
+    <fieldset>
+      <div class="control-group">
+        <label class="control-label" for="exercise_name">Exercise Name</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" id="exercise_name" {{bindAttr value="content.name"}} placeholder="e.g. Preacher curls"/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="exercise_group">Muscle Group</label>
+        <div class="controls">
+          {{view Ember.Select
+            contentBinding="controller.groups"
+            selectionBinding="controller.group"
+            optionLabelPath="content.name"
+            optionValuePath="content._id"}}
+        </div>
+      </div>
+      <div class="control-group" for="exercise_description">
+        <label class="control-label" id="exercise_description">Exercise Description</label>
+        <div class="controls">
+          <textarea class="input span6" {{bindAttr value="content.description"}} rows="6" placeholder="Enter the steps to complete the exercise"></textarea>
+        </div>
+      </div>
+      <div class="form-actions">
+        <!--<a id="mediaAdd" href="#vault/new/step2" class="btn btn-primary large">Add Media</a>-->
+        <a id="mediaAdd" {{action "addMedia"}} class="btn btn-primary large">Add Media</a>
+        <a class="btn btn-primary large" {{action "save"}}>Save</a>
+      </div>
+    </fieldset>
+  </form>
 </div>

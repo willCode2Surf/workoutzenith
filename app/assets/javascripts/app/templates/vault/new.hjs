@@ -4,6 +4,7 @@
       <h2>New Exercise</h2>
       <hr/>
     </div>
+    {{outlet step}}
   </div>
 </div>
 
