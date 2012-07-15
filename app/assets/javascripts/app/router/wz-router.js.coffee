@@ -8,7 +8,7 @@ WZ.Router = Em.Router.extend
     home: Em.Route.extend
       route: '/home'
       connectOutlets: (router, event) ->
-
+        router.get('applicationController').connectOutlet 'home'
     #   connectOutlets: (router, event) ->
     #     alert 'in index'
     #     

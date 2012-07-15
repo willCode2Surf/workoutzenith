@@ -1,2 +1,2 @@
 {{view WZ.NavbarView controllerBinding="WZ.navbarController"}}
-<div>Flaps</div>
+{{outlet}}
