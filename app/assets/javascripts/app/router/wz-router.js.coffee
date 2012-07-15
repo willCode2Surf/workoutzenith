@@ -1,14 +1,14 @@
 WZ.Router = Em.Router.extend
   enableLogging: true
   location: 'hash'
-  root: Em.State.extend
-    index: Ember.State.extend
+  root: Em.Route.extend
+    index: Ember.Route.extend
       route: '/'
       redirectsTo: 'home'
-    home: Em.State.extend
+    home: Em.Route.extend
       route: '/home'
       connectOutlets: (router, event) ->
-        alert 'got here'
+
     #   connectOutlets: (router, event) ->
     #     alert 'in index'
     #     
