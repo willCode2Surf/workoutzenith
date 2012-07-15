@@ -9,17 +9,10 @@ WZ.Router = Em.Router.extend
       route: '/home'
       connectOutlets: (router, event) ->
         router.get('applicationController').connectOutlet 'home'
-    #   connectOutlets: (router, event) ->
-    #     alert 'in index'
-    #     
-    #     homeController = router.get 'homeController'
+        router.get('homeController').connectOutlet 'bottombar', 'bottombar'
 
-    #     homeController.set 'view', Ember.View.create
-    #                                 templateName: 'app/templates/home/home'
-
-    #     console.log router.getPath 'currentState.path'
-    #     
-    #   newExercise: (e) ->
+    newExercise: (e) ->
+      alert 'got here'
     #     e.transitionTo 'vault'
     #     e.transitionTo 'new'
 
