@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/radiumsoftware/active_model_serializers.git
+  revision: d139a55a68994d704e457d05583bbcc2e7c88e31
+  specs:
+    active_model_serializers (0.1.0)
+      activemodel (~> 3.0)
+
+GIT
   remote: https://github.com/bradphelan/jasminerice.git
   revision: abeb984f9120f7064b206bdf7ec69fb2ded94b4e
   branch: master
@@ -140,9 +147,6 @@ GEM
       slop (~> 3.3.1)
     pry-rails (0.1.6)
       pry
-    rabl (0.6.14)
-      activesupport (>= 2.3.14)
-      multi_json (~> 1.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -228,6 +232,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   bootstrap-sass (>= 2.0.3)
   bson_ext
   capybara (~> 1.1.2)
@@ -249,7 +254,6 @@ DEPENDENCIES
   mongoid-rspec
   multi_json
   pry-rails (~> 0.1.6)
-  rabl
   rails (= 3.2.6)
   rdoc (~> 3.12)
   rspec-rails (= 2.8.1)

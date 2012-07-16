@@ -12,7 +12,7 @@ gem 'jquery-rails'
 # structures
 gem 'json'
 gem 'multi_json'
-gem 'rabl'
+gem 'active_model_serializers', :github => 'radiumsoftware/active_model_serializers'
 
 # use thin instead of WEBrick
 gem 'thin'

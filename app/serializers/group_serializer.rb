@@ -1,0 +1,2 @@
+class GroupSerializer < ApplicationSerializer
+end
