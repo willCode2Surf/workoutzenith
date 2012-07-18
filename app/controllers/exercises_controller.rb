@@ -2,12 +2,9 @@ class ExercisesController < ApplicationController
   respond_to :json
 
   def create
+    @exercise = Exercise.create(params)
     binding.pry
-    @exercise = Exercise.new(params[:exercise])
-    if @exercise.save!
-      @exercise
-    else
-
-    end
+    @exercise.save!
+    respond_with @exercise
   end
 end

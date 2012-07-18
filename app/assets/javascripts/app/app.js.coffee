@@ -3,7 +3,7 @@ Ember.ENV.VIEW_PRESERVES_CONTEXT = true
 window.WZ = Ember.Application.create
   ready: ->
     WZ.store = DS.Store.create
-      adapter: WZ.DataAdapter.create
+      adapter: DS.RESTAdapter.create
         bulkCommit: false
       revision: 4
 

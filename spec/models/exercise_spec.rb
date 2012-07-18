@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Exercise do
-  let (:exercise){FactoryGirl.create(:exercise)}
+  let (:exercise){FactoryGirl.build(:exercise)}
 
   context "#to_json" do
     it "should have a group" do

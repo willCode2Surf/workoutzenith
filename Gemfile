@@ -12,7 +12,7 @@ gem 'jquery-rails'
 # structures
 gem 'json'
 gem 'multi_json'
-gem 'active_model_serializers', :github => 'radiumsoftware/active_model_serializers'
+gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
 
 # use thin instead of WEBrick
 gem 'thin'
@@ -32,7 +32,7 @@ group :development, :test do
   gem 'growl'
   gem 'rspec-rails', '2.8.1'
   gem 'webrat', '0.7.3'
-  gem 'factory_girl_rails', '1.7.0'
+  gem 'factory_girl_rails'
   gem 'rdoc', '~> 3.12'
   gem "database_cleaner"
   gem "mongoid-rspec"

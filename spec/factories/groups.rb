@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :group do
     _id "4fbc6f5a26a3181742000004"
-    name "Abs"
+    name "Arms"
   end
 end

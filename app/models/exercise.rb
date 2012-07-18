@@ -3,7 +3,7 @@ class Exercise
   field :name, :type => String
   field :description, :type => String
 
-  has_one :group
+  belongs_to :group
 
   validates_presence_of :name, :description
 end

@@ -1,8 +1,8 @@
 GIT
-  remote: git://github.com/radiumsoftware/active_model_serializers.git
-  revision: d139a55a68994d704e457d05583bbcc2e7c88e31
+  remote: git://github.com/josevalim/active_model_serializers.git
+  revision: 90af9e0d16373afddfa31de9b1f05e97a68c4936
   specs:
-    active_model_serializers (0.1.0)
+    active_model_serializers (0.5.0)
       activemodel (~> 3.0)
 
 GIT
@@ -86,10 +86,10 @@ GEM
     eventmachine (0.12.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    factory_girl (2.6.4)
-      activesupport (>= 2.3.9)
-    factory_girl_rails (1.7.0)
-      factory_girl (~> 2.6.0)
+    factory_girl (3.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (3.5.0)
+      factory_girl (~> 3.5.0)
       railties (>= 3.0.0)
     ffi (1.0.11)
     fivemat (1.1.0)
@@ -238,7 +238,7 @@ DEPENDENCIES
   capybara (~> 1.1.2)
   coffee-rails (~> 3.2.1)
   database_cleaner
-  factory_girl_rails (= 1.7.0)
+  factory_girl_rails
   fivemat
   growl
   guard
