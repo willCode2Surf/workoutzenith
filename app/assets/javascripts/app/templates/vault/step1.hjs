@@ -13,7 +13,7 @@
         <div class="controls">
           {{view Ember.Select
             contentBinding="WZ.groupsController.content"
-            selectionBinding="controller.group"
+            selectionBinding="content.group"
             optionLabelPath="content.name"
             optionValuePath="content._id"}}
         </div>
