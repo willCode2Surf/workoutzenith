@@ -26,13 +26,18 @@ WZ.Router = Em.Router.extend
         step1: Ember.Route.extend
           route: '/step1'
           connectOutlets: (router, event) ->
-            router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep1'
-          addMedia: (router) ->
-            router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep2'
-          save: (e) ->
-            alert 'save'
-            # exercisesController = e.get 'exercisesController'
+            exercise = WZ.Exercise.createRecord()
+            exercise.setProperties {name: 'Bicep curl', description: 'Barbell bicep curl'}
+            router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep1', exercise
+          save: (router) ->
+            exercise = router.getPath('exercisesNewStep1Controller.content')
+            alert exercise.get 'description'
+            debugger 
+            WZ.store.commit()
+        step2: Ember.Route.extend
+          route: '/step2'
+          connectOutlets: (router, event) ->
+            exercise = router.getPath('exercisesNewStep1Controller.content')
+            debugger
+            router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep2', exercise
 
-            # WZ.store.createRecord WZ.exercise, exercisesController.get 'exercise'
-
-            # WZ.store.commit()

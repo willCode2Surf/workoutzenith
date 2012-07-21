@@ -156,7 +156,7 @@ Set.prototype = {
 
     delete hash[guid];
     var list = this.list,
-        index = Ember.ArrayUtils.indexOf(this, item);
+        index = Ember.EnumerableUtils.indexOf(this, item);
 
     list.splice(index, 1);
   },
@@ -1514,7 +1514,7 @@ DS.Store = Ember.Object.extend({
       ids = [];
       var primaryKey = type.proto().primaryKey;
 
-      ids = Ember.ArrayUtils.map(hashes, function(hash) {
+      ids = Ember.EnumerableUtils.map(hashes, function(hash) {
         return hash[primaryKey];
       });
     }
@@ -2848,7 +2848,7 @@ DS.Model = Ember.Object.extend(Ember.Evented, {
         if (cachedValue) {
           var key = association.options.key || name,
               ids = data.get(key) || [];
-          var clientIds = Ember.ArrayUtils.map(ids, function(id) {
+          var clientIds = Ember.EnumerableUtils.map(ids, function(id) {
             return store.clientIdForId(association.type, id);
           });
 

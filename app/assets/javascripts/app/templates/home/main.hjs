@@ -19,7 +19,7 @@
               <img src="/assets/carousel/gym.png"/>
             </div>
             <div class="span5">
-              <h3>Muscle Building Vault</h3>
+              <h3>Exercise Vault</h3>
               <p>
                 There are currently no exercises in the vault.<br/>Click <a href="#vault/new/step1">here</a> to add a new exercise.
               </p>

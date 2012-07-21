@@ -1,6 +1,4 @@
-WZ.GroupsController = Ember.ArrayProxy.extend
-  group: null
+WZ.GroupsController = Ember.ArrayController.extend
   content: []
   init: ->
-    # @set 'content', WZ.Group.all()
-
+    @set 'content', WZ.store.findAll(WZ.Group)

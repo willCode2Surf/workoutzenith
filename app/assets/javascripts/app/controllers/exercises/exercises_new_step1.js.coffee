@@ -1,1 +1,2 @@
-WZ.ExercisesNewStep1Controller = Em.Controller.extend()
+WZ.ExercisesNewStep1Controller = Em.Controller.extend
+  group: null

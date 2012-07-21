@@ -12,7 +12,7 @@
         <label class="control-label" for="exercise_group">Muscle Group</label>
         <div class="controls">
           {{view Ember.Select
-            contentBinding="controller.groups"
+            contentBinding="WZ.groupsController.content"
             selectionBinding="controller.group"
             optionLabelPath="content.name"
             optionValuePath="content._id"}}
@@ -21,12 +21,11 @@
       <div class="control-group" for="exercise_description">
         <label class="control-label" id="exercise_description">Exercise Description</label>
         <div class="controls">
-          <textarea class="input span6" {{bindAttr value="content.description"}} rows="6" placeholder="Enter the steps to complete the exercise"></textarea>
+          {{view Ember.TextArea valueBinding="content.description" rows="6" cols="20" placeholder="Enter a description for the exercise."}}
         </div>
       </div>
       <div class="form-actions">
-        <!--<a id="mediaAdd" href="#vault/new/step2" class="btn btn-primary large">Add Media</a>-->
-        <a id="mediaAdd" {{action "addMedia"}} class="btn btn-primary large">Add Media</a>
+        <a id="mediaAdd" href="#vault/new/step2" class="btn btn-primary large">Add Media</a>
         <a class="btn btn-primary large" {{action "save"}}>Save</a>
       </div>
     </fieldset>
