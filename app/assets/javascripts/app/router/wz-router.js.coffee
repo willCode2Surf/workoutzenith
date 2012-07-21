@@ -31,8 +31,7 @@ WZ.Router = Em.Router.extend
             router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep1', exercise
           save: (router) ->
             exercise = router.get('exercisesNewStep1Controller.content')
-            debugger
-            # WZ.store.commit()
+            WZ.store.commit()
         step2: Ember.Route.extend
           route: '/step2'
           connectOutlets: (router, event) ->

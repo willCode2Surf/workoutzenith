@@ -15,7 +15,7 @@
             contentBinding="WZ.groupsController.content"
             selectionBinding="content.group"
             optionLabelPath="content.name"
-            optionValuePath="content._id"}}
+            optionValuePath="content.id"}}
         </div>
       </div>
       <div class="control-group" for="exercise_description">

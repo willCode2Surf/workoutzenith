@@ -5,5 +5,5 @@ class Exercise
 
   belongs_to :group
 
-  validates_presence_of :name, :description
+  validates_presence_of :name, :description, :group
 end

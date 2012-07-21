@@ -3,7 +3,10 @@ class ExercisesController < ApplicationController
 
   def create
     @exercise = Exercise.create(params[:exercise])
-    @exercise.save!
-    respond_with @exercise
+    if @exercise.save
+      respond_with @exercise
+    else
+      respond_with(@exercise.errors, :status => :unprocessable_entity)
+    end
   end
 end
