@@ -1,1 +1,15 @@
-<div id="vault-home">This is the vault</div>
+<div id="vault-home">
+  <div class="btn-toolbar">
+    <div class="btn-group">
+      <a class="btn" href="#">All</a>
+    </div>
+    <div class="btn-group">
+      <a class="btn" href="#">Abs</a>
+      <a class="btn" href="#">Arms</a>
+      <a class="btn" href="#">Back</a>
+      <a class="btn" href="#">Chest</a>
+      <a class="btn" href="#">Legs</a>
+    </div>
+  </div>
+  <hr/>
+</div>
