@@ -17,16 +17,24 @@
   <hr/>
   <h3>All</h3>
   <hr/>
-  <div class="parsys_column cq-colctrl-lt5">
-    <div class="parsys_column cq-colctrl-lt5-c0">
-      <div class="section horizontalspace">
-        <div>
-          <div class="clearfix"></div>
+  <div class="span10">
+    <div class=vault_result opener">
+      <div class="vault_result image-opener">
+        <div> 
+          <img src="/assets/groups/arm.png" alt="arm exercise" title="arm exercise"><br>
         </div>
-        <div class="wtrHorizRule wtrHorizSpace" style="margin-top:0px;margin-bottom:0px;background-image:none;"></div>
       </div>
-      <div class="section image parbase">
-        <img src="http://1.2.3.10/bmi/www.waitrose.com/content/waitrose/en/home/recipes/super_fast_meals/_jcr_content/par_top/image_0.img.jpg/1334839485997.jpg" class="cq-dd-image" alt="lemon &amp; dill salmon" title="lemon &amp; dill salmon"><br></div></div><div class="parsys_column cq-colctrl-lt5-c1"><div class="section horizontalspace"><div><div class="clearfix"></div></div><div class="wtrHorizRule wtrHorizSpace" style="margin-top:0px;margin-bottom:0px;background-image:none;"></div></div><div class="section parbase text waitroserichtext"><div class="content-RTE "><p style="line-height: 5px; color: #bbc51c; font-size: 24px;">Breaded chicken &amp; sweetcorn kebabs</p><p><b>Serves&nbsp;4 in&nbsp;30 minutes</b></p><p>Bake 500g pack <b>essential Waitrose 4 British Chicken Breaded Steaks </b>according to pack instructions, until cooked through with no pink meat. Meanwhile, cook a pack of <b>4 Waitrose Sweetcorn Kebabs </b>according to pack instructions. Serve with the chicken and a big dollop of <b>essential Waitrose Coleslaw</b>.</p></div></div><div class="section image parbase"><a href="http://www.waitrose.com/webapp/wcs/stores/servlet/DisplayPromotionCmd?bundleId=WRG1breadedchicken" data-bitly-type="bitly_hover_card"><img src="http://1.2.3.13/bmi/www.waitrose.com/content/waitrose/en/home/recipes/super_fast_meals/_jcr_content/par_top/image_6.img.jpg/1334908904902.jpg" class="cq-dd-image" alt="Buy ingredients" title="Buy ingredients"></a><br>
+      <div class="vault_result detail-opener">
+        <div>
+          <p style="">Stomach Crunch</p>
+          <p>These are the instructions for the exercise.</p>
+        </div>
+        <div>
+          <a href="#">
+            Some styled bit here
+          </a>
+          <br>
+        </div>
       </div>
     </div>
   </div>
