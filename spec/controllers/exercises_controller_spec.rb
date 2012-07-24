@@ -6,7 +6,7 @@ describe ExercisesController do
   describe '#create' do
     context 'given valid params' do
       it 'creates a new exercise' do
-        post :create, :exercise => exercise.to_json
+        post :create, :exercise => exercise
       end
     end
   end

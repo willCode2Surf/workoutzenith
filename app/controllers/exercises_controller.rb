@@ -6,7 +6,7 @@ class ExercisesController < ApplicationController
     if @exercise.save
       respond_with @exercise
     else
-      respond_with(@exercise.errors, :status => :unprocessable_entity)
+      respond_with(@exercise, :status => :unprocessable_entity)
     end
   end
 end
