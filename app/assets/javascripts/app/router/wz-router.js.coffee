@@ -41,7 +41,6 @@ WZ.Router = Em.Router.extend
               debugger
 
             exercise.observeSaveOnce({success: success, error: error})
-            debugger
             WZ.store.commit()
         step2: Ember.Route.extend
           route: '/step2'

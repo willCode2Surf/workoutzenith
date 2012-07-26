@@ -1,13 +1,5 @@
-WZ.DataAdapter = DS.RESTAdapter.extend
+DS.RESTAdapter.reopenClass({
   createRecord: (store, type, record) ->
-    root = @rootForType(type)
-
-    data = {}
-    data[root] = record.toJSON()
-
-    @ajax @buildURL(root), "POST"
-      data: data,
-      success: (json) ->
-        @sideload(store, type, json, root)
-        store.didCreateRecord(record, json[root])
+    alert('hereeeeee')
+})
 
