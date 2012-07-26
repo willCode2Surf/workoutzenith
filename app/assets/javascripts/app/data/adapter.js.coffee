@@ -1,4 +1,4 @@
-WZ.DataAdapter = DS.Adapter.extend
+WZ.DataAdapter = DS.RESTAdapter.extend
   createRecord: (store, type, record) ->
     root = @rootForType(type)
 
@@ -10,3 +10,4 @@ WZ.DataAdapter = DS.Adapter.extend
       success: (json) ->
         @sideload(store, type, json, root)
         store.didCreateRecord(record, json[root])
+
