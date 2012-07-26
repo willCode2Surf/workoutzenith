@@ -8,9 +8,7 @@ WZ.Model = DS.Model.extend
 
         return if !@get('errors')
 
-        debugger
-
-        errorMessages = ages = for name, error of @get('errors')
+        errorMessages = for name, error of @get('errors')
                                   "#{name} #{error}"
 
         @set 'errorMessages', errorMessages
@@ -26,3 +24,15 @@ WZ.Model = DS.Model.extend
 
     @addObserver 'isDirty', callBack
     @addObserver 'isValid', callBack
+
+  generateErrorSummary: ->
+    debugger
+    return "" if @get('errorMessages').length == 0
+
+    html = "<ul class='error'>"
+    for error in @get 'errorMessages'
+      html += "<li>#{error}</li>"
+
+    html += "</ul>"
+    html
+

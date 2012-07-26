@@ -28,16 +28,14 @@ WZ.Router = Em.Router.extend
           connectOutlets: (router, event) ->
             exercise = WZ.Exercise.createRecord()
             exercise.setProperties {name: null, description: 'Barbell bicep curl'}
-            groupsController = router.get('groupsController')
-            groupsController.set 'content', WZ.store.find(WZ.Group)
-            router.get('exercisesNewStep1Controller').set 'groups', groupsController.get('content')
+            router.get('exercisesNewStep1Controller').set 'groups', WZ.store.find(WZ.Group)
             router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep1', exercise
           save: (router) ->
             exercise = router.get('exercisesNewStep1Controller.content')
             success = ->
               debugger
             error = () ->
-              debugger
+              alert(@generateErrorSummary())
 
             exercise.observeSaveOnce({success: success, error: error})
             WZ.store.commit()

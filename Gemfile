@@ -16,7 +16,7 @@ gem 'multi_json'
 gem "active_model_serializers", :git => "git://github.com/josevalim/active_model_serializers.git"
 
 # use thin instead of WEBrick
-gem "eventmachine", "1.0.0.beta.4.1"
+# gem "eventmachine", "1.0.0.beta.4.1"
 gem "thin", "1.3.1"
 
 
