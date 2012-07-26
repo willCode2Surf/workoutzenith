@@ -36,8 +36,7 @@ WZ.Router = Em.Router.extend
             exercise = router.get('exercisesNewStep1Controller.content')
             success = ->
               debugger
-
-            error = ->
+            error = () ->
               debugger
 
             exercise.observeSaveOnce({success: success, error: error})

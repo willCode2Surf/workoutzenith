@@ -1,5 +1,5 @@
 DS.RESTAdapter.reopenClass({
   createRecord: (store, type, record) ->
-    alert('hereeeeee')
+    console.log 'does not get here'
 })
 

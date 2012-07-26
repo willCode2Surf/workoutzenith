@@ -13,9 +13,7 @@ WZ.store = DS.Store.create
           @sideload(store, type, json, root)
           store.didCreateRecord(record, json[root])
         error: (jqXHR, statusText, error )  ->
-          debugger
-          errors = JSON.parse(jqXHR.responseText)
-          store.recordWasInvalid(record, errors)
+          store.recordWasInvalid(record, JSON.parse(jqXHR.responseText).errors)
 
   revision: 4
 
