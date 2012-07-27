@@ -30,10 +30,10 @@ WZ.Model = DS.Model.extend
   generateErrorSummary: ->
     return "" if @get('errorMessages').length == 0
 
-    html = "<ul class='error'>"
+    html = "<div  class='errors'><ul class='statusMessage'>"
     for error in @get 'errorMessages'
       html += "<li>#{error}</li>"
 
-    html += "</ul>"
+    html += "</ul></div>"
     html
 

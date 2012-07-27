@@ -33,7 +33,7 @@ WZ.Router = Em.Router.extend
           save: (router) ->
             exercise = router.get('exercisesNewStep1Controller.content')
             success = ->
-              $('.status').html('<ul><li class="success">The exercise has successfully been created</i></ul>')
+              $('.status').html('<div class="success"><ul class="statusMessage"><li>The exercise has successfully been created</li></ul></div>')
             error = () ->
               $('.status').html(@generateErrorSummary())
 
