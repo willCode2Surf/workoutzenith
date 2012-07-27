@@ -1,10 +1,13 @@
 WZ.Model = DS.Model.extend
+  primaryKey: '_id'
   observeSaveOnce: (options) ->
     callBack = ->
       outcome = 'success'
       if @get('isDirty')
         return if @get 'isValid' #not submitted yet
         outcome = 'error'
+
+        WZ.store.rollback()
 
         return if !@get('errors')
 
@@ -26,7 +29,6 @@ WZ.Model = DS.Model.extend
     @addObserver 'isValid', callBack
 
   generateErrorSummary: ->
-    debugger
     return "" if @get('errorMessages').length == 0
 
     html = "<ul class='error'>"
