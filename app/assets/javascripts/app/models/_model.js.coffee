@@ -5,9 +5,8 @@ WZ.Model = DS.Model.extend
       outcome = 'success'
       if @get('isDirty')
         return if @get 'isValid' #not submitted yet
-        outcome = 'error'
 
-        WZ.store.rollback()
+        outcome = 'error'
 
         return if !@get('errors')
 

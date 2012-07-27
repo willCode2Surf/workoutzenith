@@ -31,7 +31,6 @@ WZ.Router = Em.Router.extend
             router.get('exercisesNewStep1Controller').set 'groups', WZ.store.find(WZ.Group)
             router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep1', exercise
           save: (router) ->
-            debugger
             exercise = router.get('exercisesNewStep1Controller.content')
             success = ->
               $('.status').html('<ul><li class="success">The exercise has successfully been created</i></ul>')
