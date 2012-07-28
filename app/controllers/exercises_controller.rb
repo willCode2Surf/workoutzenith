@@ -10,12 +10,6 @@ class ExercisesController < ApplicationController
     end
   end
 
-  def index
-    @exercises = exercises
-
-    respond_with @exercises
-  end
-
   protected
 
     def exercises

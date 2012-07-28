@@ -1,12 +1,6 @@
 class GroupsController < ApplicationController
   respond_to :json
 
-  def index
-    @groups = groups
-    
-    respond_with @groups
-  end
-
   protected
 
     def groups

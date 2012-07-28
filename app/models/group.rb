@@ -3,5 +3,4 @@ class Group
   include Mongoid::Timestamps
   field :name, :type => String
 
-  has_many :exercises
 end
