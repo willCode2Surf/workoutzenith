@@ -27,7 +27,6 @@ class ApplicationController < ActionController::Base
   end
 
   def collection
-    # @collection ||= eval "#{resource_name}.all(sort: [[:name, :asc]])"
     @collection ||= resource_class.send(:all, sort: [[:name, :asc]])
   end
 end
