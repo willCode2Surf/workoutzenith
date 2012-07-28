@@ -18,6 +18,9 @@
   <h3>All</h3>
   <hr/>
   <div class="span10">
+  {{profile}}
+  {{time "timing"}}
+  {{#each content}}
     <div class=vault_result opener">
       <div class="vault_result image-opener">
         <div> 
@@ -26,8 +29,10 @@
       </div>
       <div class="vault_result detail-opener">
         <div>
-          <p style="">Stomach Crunch</p>
-          <p>These are the instructions for the exercise.</p>
+          <div>
+            <p style="line-height: 5px; color: #bbc51c; font-size: 24px;">{{name}}</p>
+            <p>{{description}}</p>
+          </div>
         </div>
         <div>
           <a href="#">
@@ -37,5 +42,8 @@
         </div>
       </div>
     </div>
+  {{/each}}
+  {{timeEnd "timing"}}
+  {{profileEnd}}
   </div>
 </div>
