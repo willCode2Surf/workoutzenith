@@ -22,7 +22,7 @@
   {{time "timing"}}
   {{#each content}}
     <div class=vault_result opener">
-      <strong>flappage = {{group.name}}</strong>
+      <strong>flappage = {{group}}</strong>
       <div class="vault_result image-opener">
         <div> 
           <img src="/assets/groups/{{unbound group.name}}.png" alt="arm exercise" title="arm exercise"><br>
