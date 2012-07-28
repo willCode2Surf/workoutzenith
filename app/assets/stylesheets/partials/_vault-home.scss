@@ -8,7 +8,8 @@ div#vault-home{
     float: left;
     height: 100%;
     vertical-align: top;
-    width: 100%
+    width: 100%;
+    margin-bottom: 30px
   }
 
   div.opener {
@@ -19,6 +20,9 @@ div#vault-home{
   div.image-opener {
     width: 15%;
     margin-right: 0.5em;
+    img{
+      margin-top: -20px;
+    }
   }
 
   div.detail-opener {
