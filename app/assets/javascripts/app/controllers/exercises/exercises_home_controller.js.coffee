@@ -1,1 +1,2 @@
-WZ.ExercisesHomeController = Em.Controller.extend({})
+WZ.ExercisesHomeController = Em.ArrayController.extend
+  content: Ember.A()
