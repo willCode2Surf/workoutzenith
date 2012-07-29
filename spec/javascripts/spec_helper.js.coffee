@@ -6,9 +6,8 @@ beforeEach ->
 
   Ember.test = true
 
-  $('#jasmine_content').append('<div id="main"></div>')
+  $('#jasmine_content').html('').append('<div id="main"></div>')
   
-  alert Test.Factory.exercises().get('length')
 $ ->
   $('body').html('').append($('<div id="jasmine_content"></div>'))
 
