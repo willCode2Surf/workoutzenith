@@ -1,14 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  def index
-    # apply_scopes!
-
-    self.collection = collection #.page params[:page] unless params[:ids]
-
-    respond_with collection
-  end
-
   protected 
   def collection=(value)
     @collection = value

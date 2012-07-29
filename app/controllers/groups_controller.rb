@@ -1,3 +1,2 @@
-class GroupsController < ApplicationController
-  respond_to :json
+class GroupsController < ApiController
 end
