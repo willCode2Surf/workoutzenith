@@ -1,4 +1,4 @@
-class ExercisesController < ApiController
+class ExercisesController < PagingController
   def create
     @exercise = Exercise.create(params[:exercise])
     if @exercise.save
