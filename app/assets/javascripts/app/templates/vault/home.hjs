@@ -12,7 +12,7 @@
     </div>
   </div>
   <hr/>
-  <h3>All</h3>
+  <h3>{{filteredHeading}}</h3>
   <hr/>
   <div class="span10">
   {{profile}}
