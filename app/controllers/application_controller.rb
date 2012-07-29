@@ -27,6 +27,6 @@ class ApplicationController < ActionController::Base
   end
 
   def collection
-    @collection ||= resource_class.send(:all, sort: [[:name, :asc]])
+    @collection ||= Kaminari.paginate_array(resource_class.send(:all, sort: [[:name, :asc]])).page params[:page]
   end
 end

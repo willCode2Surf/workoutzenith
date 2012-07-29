@@ -25,6 +25,9 @@ gem "thin", "1.3.1"
 gem 'bson_ext'
 gem 'mongoid'
 
+# pagination
+gem 'kaminari'
+
 gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "bootstrap-sass", ">= 2.0.3"

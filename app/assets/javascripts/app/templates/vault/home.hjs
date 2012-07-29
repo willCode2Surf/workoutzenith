@@ -13,6 +13,7 @@
   </div>
   <hr/>
   <h3>All</h3>
+  <div>({{filteredGroup.length}})
   <hr/>
   <div class="span10">
   {{profile}}

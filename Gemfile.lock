@@ -118,6 +118,10 @@ GEM
     json_spec (1.0.3)
       multi_json (~> 1.0)
       rspec (~> 2.0)
+    kaminari (0.13.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      railties (>= 3.0.0)
     libwebsocket (0.1.5)
       addressable
     listen (0.4.7)
@@ -255,6 +259,7 @@ DEPENDENCIES
   jquery-rails
   json
   json_spec
+  kaminari
   mongoid
   mongoid-rspec
   multi_json
