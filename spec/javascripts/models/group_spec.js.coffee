@@ -1,2 +1,4 @@
 describe "Models", ->
-  describe "Category", ->
+  describe "Group", ->
+    it 'should'
+

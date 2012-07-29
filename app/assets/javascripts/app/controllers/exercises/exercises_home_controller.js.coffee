@@ -18,8 +18,6 @@ WZ.ExercisesHomeController = Em.ArrayController.extend({
                  ).property('content', 'selectedGroup')
 
   filteredHeading: ( ->
-                    selectedGroup = @get('selectedGroup')
-
                     "#{@get('selectedGroup') || 'All'} - (#{@get('filteredGroup.length')})"
 
                    ).property('filteredGroup', 'filteredGroup.length')
