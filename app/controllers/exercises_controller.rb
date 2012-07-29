@@ -1,4 +1,4 @@
-class ExercisesController < ApplicationController
+class ExercisesController < ApiController
   respond_to :json
 
   def create
