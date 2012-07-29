@@ -1,4 +1,6 @@
 class ApiController < ApplicationController
+  respond_to :json
+
   def index
     # apply_scopes!
 

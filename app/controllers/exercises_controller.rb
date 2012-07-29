@@ -1,6 +1,4 @@
 class ExercisesController < ApiController
-  respond_to :json
-
   def create
     @exercise = Exercise.create(params[:exercise])
     if @exercise.save
