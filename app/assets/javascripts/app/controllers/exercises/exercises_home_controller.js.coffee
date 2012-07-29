@@ -1,23 +1,21 @@
 WZ.ExercisesHomeController = Em.ArrayController.extend
   content: Ember.A()
+  selectedGroup: null
 
-  arms: ( -> 
-          @filterProperty('group.name', 'Arms')
-        ).property('@each.isArms')
+  filter: (event) ->
+    kind = $(event.target).html()
+    @set('selectedGroup', kind)
+    $('#vault-home h3').html(kind)
 
-  abs:  ( -> 
-          @filterProperty('group.name', 'Abs')
-        ).property('@each.isAbs')
+  all: (event) ->
+    @set('selectedGroup', null)
+    $('#vault-home h3').html('All')
 
-  back: ( -> 
-          @filterProperty('group.name', 'Back')
-        ).property('@each.isBack')
+  filteredGroup: (->
+                    selectedGroup = @get('selectedGroup')
 
-  chest: ( -> 
-          @filterProperty('group.name', 'Chest')
-        ).property('@each.isChest')
+                    return @get('content') if !selectedGroup
 
-  legs: ( -> 
-          @filterProperty('group.name', 'Legs')
-        ).property('@each.isLegs')
+                    return @get('content').filterProperty('group.name', selectedGroup)
+                 ).property('content', 'selectedGroup')
 

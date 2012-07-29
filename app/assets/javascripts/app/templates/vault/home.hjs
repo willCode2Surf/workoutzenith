@@ -1,17 +1,14 @@
 <div id="vault-home">
   <div class="btn-toolbar">
     <div class="btn-group">
-      <a class="btn" href="#">All</a>
+      <a class="btn" href="#" {{action "all" target="controller"}}>All</a>
     </div>
     <div class="btn-group">
-      <a class="btn" href="#" {{action "filter" context="Abs"}}>Abs</a>
-      <a class="btn" href="#">Arms</a>
-      <a class="btn" href="#">Back</a>
-      <a class="btn" href="#">Chest</a>
-      <a class="btn" href="#">Legs</a>
-    </div>
-    <div class="btn-group">
-      <a class="btn" href="#">Arrange By Date</a>
+      <a class="btn" href="#" {{action "filter" target="controller"}}>Abs</a>
+      <a class="btn" href="#" {{action "filter" target="controller"}}>Arms</a>
+      <a class="btn" href="#" {{action "filter" target="controller"}}>Back</a>
+      <a class="btn" href="#" {{action "filter" target="controller"}}>Chest</a>
+      <a class="btn" href="#" {{action "filter" target="controller"}}>Legs</a>
     </div>
   </div>
   <hr/>
@@ -20,7 +17,7 @@
   <div class="span10">
   {{profile}}
   {{time "timing"}}
-  {{#each content}}
+  {{#each filteredGroup}}
     <div class=vault_result opener">
       <div class="vault_result image-opener">
         <div> 
