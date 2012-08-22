@@ -1,33 +1,25 @@
 describe 'router', ->
   describe 'content router', ->
     beforeEach ->
-      Ember.run =>
-        @router = WZ.router
+      WZ.initialize()
+      WZ.router.route '/'
 
     afterEach ->
-      Ember.run =>
-        @router.transitionTo 'root'
-
-    it 'should inject controllers into router', ->
-      expect(@router.applicationController).toBeTruthy()
-      expect(@router.exercisesController).toBeTruthy()
-      expect(@router.homeController).toBeTruthy()
+      WZ.router.route '/'
 
     it 'should have a root view', ->
-      expect(@router.getPath('currentState.path')).toEqual 'root'
+      console.log WZ.router.get('currentState.path')
+      expect(WZ.router.get('currentState.path')).toEqual 'root.home'
 
     it 'should transition to vault', ->
-      Ember.run =>
-        @router.transitionTo 'vault'
-      expect(@router.getPath('currentState.path')).toEqual 'root.vault'
+      WZ.router.route '/vault'
+      expect(WZ.router.get('currentState.path')).toEqual 'root.vault.index'
 
     it 'should transition to new vault', ->
-      Ember.run =>
-        @router.transitionTo 'vault.new'
-      expect(@router.getPath('currentState.path')).toEqual 'root.vault.new'
+      WZ.router.transitionTo 'vault.new'
+      expect(WZ.router.get('currentState.path')).toEqual 'root.vault.new'
       
     it 'should transition to new step1', ->
-      Ember.run =>
-        @router.transitionTo 'vault.new.step1'
-      expect(@router.getPath('currentState.path')).toEqual 'root.vault.new.step1'
+      WZ.router.transitionTo 'vault.new.step1'
+      expect(WZ.router.get('currentState.path')).toEqual 'root.vault.new.step1'
 
