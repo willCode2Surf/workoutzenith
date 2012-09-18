@@ -50,3 +50,5 @@ window.Fixtures = Fixtures = Ember.Object.create
           WZ.store.load(type, data.id, data)
 
 window.F = F = Fixtures
+
+Fixtures.add WZ.Group
