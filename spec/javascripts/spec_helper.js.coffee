@@ -11,6 +11,9 @@ beforeEach ->
 $ ->
   $('body').html('').append($('<div id="jasmine_content"></div>'))
 
+afterEach ->
+  $('#jasmine_content').remove()
+
 window.createView = (klass, selector) ->
   view = klass.create()
 
