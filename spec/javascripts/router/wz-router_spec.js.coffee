@@ -3,9 +3,6 @@ describe 'router', ->
     beforeEach ->
       WZ.initialize()
 
-    afterEach ->
-      WZ.router.route '/'
-
     it 'should transition to home from root', ->
       WZ.router.route '/'
       expect(WZ.router.get('currentState.path')).toEqual 'root.home'
