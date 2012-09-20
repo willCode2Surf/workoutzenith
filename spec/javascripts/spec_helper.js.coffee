@@ -12,7 +12,7 @@ $ ->
   $('body').html('').append($('<div id="jasmine_content"></div>'))
 
 afterEach ->
-  $('body div.ember-view').remove()
+  $('.ember-view').remove()
 
 window.createView = (klass, selector) ->
   view = klass.create()

@@ -1,2 +1,1 @@
-WZ.ApplicationController = Em.Controller.extend
-  view: null
+WZ.ApplicationController = Em.Controller.extend()

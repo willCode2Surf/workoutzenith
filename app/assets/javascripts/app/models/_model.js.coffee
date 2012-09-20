@@ -37,3 +37,10 @@ WZ.Model = DS.Model.extend
     html += "</ul></div>"
     html
 
+WZ.Model.reopenClass
+  typeFromString: (str) ->
+    WZ[Em.String.classify(str)]
+
+  typeToString: (type) ->
+    type.toString().split('.').slice(-1)[0].underscore()
+
