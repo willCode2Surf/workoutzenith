@@ -3,7 +3,9 @@ describe 'controllers', ->
     beforeEach ->
       @controller = WZ.ExercisesHomeController.create()
       @controller.set 'content', Ember.A()
-      @controller.set 'content', Test.Factory.exercises()
+      # debugger
+      @controller.set 'content', F.fixturesForType(WZ.Group)
+      # @controller.set 'content', Test.Factory.exercises()
 
     it 'should load all exercises', ->
       expect(@controller.get('filteredGroup.length')).toEqual(5)

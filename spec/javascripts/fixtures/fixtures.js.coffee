@@ -68,4 +68,21 @@ Fixtures.add WZ.Group,
     _id: "50143de626a3187dba000005"
     name: "Legs"
 
-Fixtures.loadAll()
+Fixtures.add WZ.Exercise,
+  Abs:
+    _id: "50143de626a3187dba000006"
+    name: "Abs Exercise"
+  Arms:
+    _id: "50143de626a3187dba000007"
+    name: "Arms Exercise"
+  Back:
+    _id: "50143de626a3187dba000008"
+    name: "Back Exercise"
+  Chest:
+    _id: "50143de626a3187dba000009"
+    name: "Chest Exercise"
+  Legs:
+    _id: "50143de626a3187dba000010"
+    name: "Legs Exercise"
+
+Fixtures.loadAll(now: true)
