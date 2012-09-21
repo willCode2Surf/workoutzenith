@@ -44,3 +44,6 @@ WZ.Model.reopenClass
   typeToString: (type) ->
     type.toString().split('.').slice(-1)[0].underscore()
 
+  isInStore: (id) ->
+    !!WZ.store.typeMapFor(@).idToCid[id]
+
