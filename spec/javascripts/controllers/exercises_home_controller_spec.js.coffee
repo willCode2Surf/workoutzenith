@@ -3,8 +3,8 @@ describe 'controllers', ->
     beforeEach ->
       @controller = WZ.ExercisesHomeController.create()
       @controller.set 'content', Ember.A()
-      debugger
       @controller.set 'content', WZ.store.find WZ.Exercise
+      debugger
 
     it 'should load all exercises', ->
       expect(@controller.get('filteredGroup.length')).toEqual(5)

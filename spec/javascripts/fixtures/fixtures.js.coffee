@@ -85,4 +85,4 @@ Fixtures.add WZ.Exercise,
     _id: "50143de626a3187dba000010"
     name: "Legs Exercise"
 
-Fixtures.loadAll(now: true)
+Fixtures.loadAll()
