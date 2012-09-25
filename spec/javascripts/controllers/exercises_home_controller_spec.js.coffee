@@ -3,7 +3,6 @@ describe 'controllers', ->
     beforeEach ->
       @controller = WZ.ExercisesHomeController.create()
       @controller.set 'content', Ember.A()
-      debugger
       @controller.set 'content', WZ.Exercise.find()
 
     it 'should load all exercises', ->
