@@ -72,17 +72,22 @@ Fixtures.add WZ.Exercise,
   Abs:
     _id: "50143de626a3187dba000006"
     name: "Abs Exercise"
+    # group: {"_id":"50143de626a3187dba000001","name":"Abs"}
   Arms:
     _id: "50143de626a3187dba000007"
     name: "Arms Exercise"
+    # group: {"_id":"50143de626a3187dba000002","name":"Arms"}
   Back:
     _id: "50143de626a3187dba000008"
     name: "Back Exercise"
+    # group: {"_id":"50143de626a3187dba000003","name":"Back"}
   Chest:
     _id: "50143de626a3187dba000009"
     name: "Chest Exercise"
+    # group: {"_id":"50143de626a3187dba000004","name":"Chest"}
   Legs:
     _id: "50143de626a3187dba000010"
     name: "Legs Exercise"
+    # group:{"_id":"50143de626a3187dba000005","name":"Legs"}
 
 Fixtures.loadAll()
