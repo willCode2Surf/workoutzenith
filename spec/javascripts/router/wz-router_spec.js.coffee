@@ -13,5 +13,6 @@ describe 'router', ->
       
     it 'should transition to step1', ->
       WZ.router.route 'vault/new/step1'
+      debugger
       expect(WZ.router.get('currentState.path')).toEqual 'root.vault.new.step1'
 
