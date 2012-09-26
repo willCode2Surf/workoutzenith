@@ -29,21 +29,21 @@ WZ.Router = Em.Router.extend
         step1: Ember.Route.extend
           route: '/step1'
           connectOutlets: (router, event) ->
-            # exercise = WZ.Exercise.createRecord()
+            exercise = WZ.Exercise.createRecord()
             router.get('exercisesNewStep1Controller').set 'groups', WZ.store.find(WZ.Group)
             router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep1', exercise
           save: (router) ->
-            # exercise = router.get('exercisesNewStep1Controller.content')
-            # success = ->
-            #   $('.status').html('<div class="success"><ul class="statusMessage"><li>The exercise has successfully been created</li></ul></div>')
-            # error = () ->
-            #   $('.status').html(@generateErrorSummary())
+            exercise = router.get('exercisesNewStep1Controller.content')
+            success = ->
+              $('.status').html('<div class="success"><ul class="statusMessage"><li>The exercise has successfully been created</li></ul></div>')
+            error = () ->
+              $('.status').html(@generateErrorSummary())
 
-            # exercise.observeSaveOnce({success: success, error: error})
-            # WZ.store.commit()
+            exercise.observeSaveOnce({success: success, error: error})
+            WZ.store.commit()
         step2: Ember.Route.extend
           route: '/step2'
           connectOutlets: (router, event) ->
-            # exercise = router.get('exercisesNewStep1Controller.content')
-            # router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep2', exercise
+            exercise = router.get('exercisesNewStep1Controller.content')
+            router.get('exercisesNewController').connectOutlet 'step', 'exercisesNewStep2', exercise
 
