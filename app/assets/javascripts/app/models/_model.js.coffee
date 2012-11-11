@@ -1,5 +1,5 @@
 WZ.Model = DS.Model.extend
-  primaryKey: '_id'
+  primaryKey: 'id'
   observeSaveOnce: (options) ->
     callBack = ->
       outcome = 'success'
