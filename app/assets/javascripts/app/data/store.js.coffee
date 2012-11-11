@@ -6,6 +6,8 @@ WZ.store = DS.Store.create
   revision: 7
   adapter: DS.RESTAdapter.create
     bulkCommit: false
+    mappings:
+      groups: 'WZ.Group'
 
 #   adapter: DS.FixtureAdapter.create
 #     plurals: {}
